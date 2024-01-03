@@ -5,6 +5,7 @@ return require('packer').startup(function(use)
   use 'wbthomason/packer.nvim'
 
 
+  use("xiyaowong/telescope-emoji")
   use { "windwp/nvim-autopairs",
   -- Optional dependency
   dependencies = { 'hrsh7th/nvim-cmp' },
