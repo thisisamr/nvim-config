@@ -27,6 +27,12 @@ return require('packer').startup(function(use)
   }
   --use 'neovim/nvim-lspconfig'
   use 'simrat39/rust-tools.nvim'
+  use { "rcarriga/nvim-dap-ui", requires = {"mfussenegger/nvim-dap"} }
+  use {'folke/neodev.nvim'}
+  -- Debugging
+  use 'nvim-lua/plenary.nvim'
+  use 'mfussenegger/nvim-dap'
+  use ("folke/tokyonight.nvim")
   use ('nvim-treesitter/nvim-treesitter', {run= ':TSUpdate'})
   use ('nvim-treesitter/playground')
   use ( 'ThePrimeagen/harpoon')
