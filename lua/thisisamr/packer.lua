@@ -3,8 +3,21 @@ vim.cmd [[packadd packer.nvim]]
 return require('packer').startup(function(use)
   -- Packer can manage itself
   use 'wbthomason/packer.nvim'
-
-
+use {
+    'numToStr/Comment.nvim',
+    config = function()
+        require('Comment').setup()
+    end
+}
+use {
+  "nvim-neotest/neotest",
+  requires = {
+    "nvim-neotest/nvim-nio",
+    "nvim-lua/plenary.nvim",
+    "antoinemadec/FixCursorHold.nvim",
+    "nvim-treesitter/nvim-treesitter"
+  }
+}
   use({
       "kylechui/nvim-surround",
       tag = "*", -- Use for stability; omit to use `main` branch for the latest features
@@ -42,6 +55,7 @@ return require('packer').startup(function(use)
   use 'nvim-lua/plenary.nvim'
   use 'mfussenegger/nvim-dap'
   use ("folke/tokyonight.nvim")
+  use ("scottmckendry/cyberdream.nvim")
   use ("olimorris/onedarkpro.nvim")
   use ('nvim-treesitter/nvim-treesitter', {run= ':TSUpdate'})
   use ('nvim-treesitter/playground')
